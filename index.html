@@ -1,113 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>原神风格主页</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>翠岭风景区 - 官方介绍</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Helvetica", "Arial", sans-serif;
-      background: #f2efe6;
-      color: #333;
-    }
-    .hero {
-      height: 100vh;
-      background: url('https://picsum.photos/seed/genshin/1920/1080') center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.8);
-    }
-    .hero h1 {
-      font-size: 4rem;
-      letter-spacing: 2px;
-      margin: 0;
-    }
-    .hero p {
-      font-size: 1.4rem;
-      margin-top: 12px;
-    }
-    .btn {
-      margin-top: 35px;
-      padding: 14px 40px;
-      background: rgba(255,255,255,0.85);
-      color: #3a3a3a;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      text-decoration: none;
-      backdrop-filter: blur(6px);
-      transition: 0.25s;
-    }
-    .btn:hover {
-      background: rgba(255,255,255,1);
-      transform: translateY(-3px);
-    }
-    .section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 20px;
-      line-height: 1.7;
-    }
-    h2 {
-      font-size: 2rem;
-      color: #2c3e50;
-      border-left: 6px solid #c7a46d;
-      padding-left: 10px;
-      margin-bottom: 15px;
-    }
-    ul li {
-      margin: 8px 0;
-    }
+    body { font-family: 'Noto Sans SC', sans-serif; }
+    .hero { background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=60'); background-size: cover; background-position: center; }
+    .card-bg { background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8)); }
   </style>
 </head>
-<body>
-  <div class="hero">
-    <h1>✦ 提瓦特冒险启程 ✦</h1>
-    <p>开放世界 · 元素战斗 · 自由探索</p>
-    <a class="btn" href="#start">开始旅途</a>
-  </div>
+<body class="bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="https://via.placeholder.com/48" alt="logo" class="rounded-full">
+        <div>
+          <h1 class="text-xl font-bold">翠岭风景区</h1>
+          <p class="text-sm text-gray-500">亲近自然，拥抱四季</p>
+        </div>
+      </div>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#about" class="hover:text-green-600">关于我们</a>
+        <a href="#attractions" class="hover:text-green-600">景点介绍</a>
+        <a href="#visit" class="hover:text-green-600">出行指南</a>
+        <a href="#gallery" class="hover:text-green-600">相册</a>
+        <a href="#contact" class="hover:text-green-600">联系我们</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#tickets" class="bg-green-600 text-white px-4 py-2 rounded-lg shadow">在线购票</a>
+      </div>
+    </div>
+  </header>
 
-  <div class="section" id="start">
-    <h2>世界观简介</h2>
-    <p>在名为「提瓦特」的七元素世界中，你将以「旅行者」的身份，与不同国家的人们相遇并冒险，解开失散亲人的秘密，以及世界背后的真相。</p>
+  <!-- Hero -->
+  <section class="hero h-96 flex items-center text-white">
+    <div class="container mx-auto px-6">
+      <div class="w-full md:w-2/3 lg:w-1/2">
+        <div class="bg-black bg-opacity-40 p-6 rounded-lg">
+          <h2 class="text-3xl md:text-4xl font-extrabold">欢迎来到翠岭风景区</h2>
+          <p class="mt-3 text-lg leading-relaxed">百里山川，云海日出，四季各异的自然风光与人文景观，等待您的探索。</p>
+          <div class="mt-4 flex gap-3">
+            <a href="#attractions" class="bg-white text-green-700 px-4 py-2 rounded-md font-semibold">查看景点</a>
+            <a href="#visit" class="border border-white px-4 py-2 rounded-md">出行指南</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <h2>核心特色</h2>
-    <ul>
-      <li>✦ 七元素互动战斗系统</li>
-      <li>✦ 高自由度开放世界</li>
-      <li>✦ 精美角色立绘与声优阵容</li>
-      <li>✦ 动态天气、时间与环境系统</li>
-    </ul>
+  <!-- About -->
+  <section id="about" class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h3 class="text-2xl font-bold">关于翠岭</h3>
+        <p class="mt-4 text-gray-600">翠岭风景区坐落于群山之间，拥有丰富的森林资源、清澈的湖泊与古老的步道。这里适合徒步、摄影、露营与家庭亲子游。</p>
+        <ul class="mt-4 space-y-2 text-gray-600">
+          <li>· 占地面积：约120平方公里</li>
+          <li>· 主要景观：云海观景台、翠湖、古杉林、观鸟区</li>
+          <li>· 最佳季节：春赏花、夏避暑、秋赏红叶、冬观雪景</li>
+        </ul>
+      </div>
+      <div class="rounded-lg overflow-hidden shadow-lg">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=60" alt="about" class="w-full h-64 object-cover">
+      </div>
+    </div>
+  </section>
 
-    <h2>角色示例</h2>
-    <p>你可以在这里加入角色展示、卡片、立绘等内容。</p>
-  </div>
-  <audio id="bgm" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Anime_Grill/Kevin_MacLeod_-_Colorless_Aura.mp3" loop></audio>
+  <!-- Attractions -->
+  <section id="attractions" class="bg-white py-12">
+    <div class="container mx-auto px-6">
+      <h3 class="text-2xl font-bold">热门景点</h3>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="rounded-lg overflow-hidden shadow card-bg">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1000&q=60" alt="cloud-deck" class="w-full h-44 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">云海观景台</h4>
+            <p class="text-sm text-gray-600 mt-2">清晨观云海与日出，视野开阔，是摄影爱好者的天堂。</p>
+            <p class="mt-3 text-sm text-gray-500">步行约20分钟 / 无障碍通道</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="rounded-lg overflow-hidden shadow card-bg">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=60" alt="lake" class="w-full h-44 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">翠湖</h4>
+            <p class="text-sm text-gray-600 mt-2">湖水清澈，可划船、垂钓，湖畔设有休憩步道和观景长廊。</p>
+            <p class="mt-3 text-sm text-gray-500">家庭友好 / 可租船</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-lg overflow-hidden shadow card-bg">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=60" alt="forest" class="w-full h-44 object-cover">
+          <div class="p-4">
+            <h4 class="font-semibold">古杉林步道</h4>
+            <p class="text-sm text-gray-600 mt-2">古老的杉木群与幽静的小径，空气清新，适合慢行与冥想。</p>
+            <p class="mt-3 text-sm text-gray-500">易行 / 宠物友好</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // 自动播放（移动端可能需要手动触发）
-    window.addEventListener('load', () => {
-      const audio = document.getElementById('bgm');
-      audio.volume = 0.5;
-      audio.play().catch(() => {});
-    });
+  <!-- Visit Info -->
+  <section id="visit" class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-lg shadow bg-white">
+        <h4 class="font-semibold">开放时间</h4>
+        <p class="mt-2 text-gray-600">每日 08:00 - 18:00（旺季延长至19:00）</p>
+      </div>
+      <div class="p-6 rounded-lg shadow bg-white">
+        <h4 class="font-semibold">门票</h4>
+        <p class="mt-2 text-gray-600">成人：¥80 / 儿童：¥40（6岁以下免票）</p>
+      </div>
+      <div class="p-6 rounded-lg shadow bg-white">
+        <h4 class="font-semibold">交通</h4>
+        <p class="mt-2 text-gray-600">自驾：高速出口后30分钟；公共交通：市区直达巴士，每日多班。</p>
+      </div>
+    </div>
+  </section>
 
-    // 角色展示动画（仿米哈游浮动效果）
-    document.querySelectorAll('.character-card').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.05)';
-        card.style.boxShadow = '0 12px 28px rgba(0,0,0,0.25)';
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-        card.style.boxShadow = '0 6px 16px rgba(0,0,0,0.15)';
-      });
-    });
-  </script>
+  <!-- Gallery -->
+  <section id="gallery" class="bg-gray-100 py-12">
+    <div class="container mx-auto px-6">
+      <h3 class="text-2xl font-bold">精彩瞬间</h3>
+      <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" class="w-full h-40 object-cover rounded-lg shadow" alt="g1">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=60" class="w-full h-40 object-cover rounded-lg shadow" alt="g2">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=60" class="w-full h-40 object-cover rounded-lg shadow" alt="g3">
+        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=60" class="w-full h-40 object-cover rounded-lg shadow" alt="g4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Map & Contact -->
+  <section id="contact" class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-2 gap-6 items-start">
+      <div class="rounded-lg overflow-hidden shadow">
+        <!-- 替换成真实的地图 iframe -->
+        <div class="w-full h-64 bg-gray-200 flex items-center justify-center">地图占位（请替换为 Google Maps / 高德地图 iframe）</div>
+      </div>
+      <div class="p-6 rounded-lg shadow bg-white">
+        <h4 class="font-semibold">联系我们</h4>
+        <p class="mt-2 text-gray-600">邮箱：info@cuiling.com</p>
+        <p class="mt-1 text-gray-600">电话：+86 010-1234-5678</p>
+        <p class="mt-1 text-gray-600">地址：翠岭风景区游客中心</p>
+        <form class="mt-4 space-y-3">
+          <input class="w-full border rounded px-3 py-2" placeholder="姓名">
+          <input class="w-full border rounded px-3 py-2" placeholder="邮箱">
+          <textarea class="w-full border rounded px-3 py-2" rows="4" placeholder="留言"></textarea>
+          <div class="flex items-center gap-3">
+            <button class="bg-green-600 text-white px-4 py-2 rounded">发送留言</button>
+            <a href="#tickets" class="text-sm text-gray-500">在线购票 / 团队预订</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t py-6">
+    <div class="container mx-auto px-6 text-center text-gray-600">
+      © 2025 翠岭风景区  版权所有
+    </div>
+  </footer>
+
 </body>
 </html>
