@@ -87,5 +87,27 @@
     <h2>角色示例</h2>
     <p>你可以在这里加入角色展示、卡片、立绘等内容。</p>
   </div>
+  <audio id="bgm" src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Anime_Grill/Kevin_MacLeod_-_Colorless_Aura.mp3" loop></audio>
+
+  <script>
+    // 自动播放（移动端可能需要手动触发）
+    window.addEventListener('load', () => {
+      const audio = document.getElementById('bgm');
+      audio.volume = 0.5;
+      audio.play().catch(() => {});
+    });
+
+    // 角色展示动画（仿米哈游浮动效果）
+    document.querySelectorAll('.character-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px) scale(1.05)';
+        card.style.boxShadow = '0 12px 28px rgba(0,0,0,0.25)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+        card.style.boxShadow = '0 6px 16px rgba(0,0,0,0.15)';
+      });
+    });
+  </script>
 </body>
 </html>
